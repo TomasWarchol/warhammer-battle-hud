@@ -1,0 +1,131 @@
+{
+  "WHAMMO": {
+    "Title": "Warhammer Battle HUD",
+    "NoAmmo": "Brak pasującej amunicji.",
+    "NoneSelected": "Brak amunicji",
+    "ChooseAmmo": "Wybierz amunicję",
+    "ToggleEquip": "załóż lub odłóż",
+    "Reload": "Przeładuj",
+    "Failed": "To się nie udało. Szczegóły w konsoli (F12).",
+    "Empty": "{name}: zużyto ostatnią sztukę.",
+    "Settings": {
+      "ShowBarName": "Pokaż rząd amunicji",
+      "ShowBarHint": "Tylko dla tego użytkownika.",
+      "OnlyEquippedName": "Tylko założona broń dystansowa",
+      "OnlyEquippedHint": "Odłożona broń dystansowa trafia do małej grupy ekwipunku.",
+      "ShowGearName": "Pokazuj pozostałą broń",
+      "ShowGearHint": "Mała grupa ikon do zakładania broni białej i tarcz jednym kliknięciem.",
+      "LowAmmoName": "Ostrzeżenie o małej ilości amunicji",
+      "LowAmmoHint": "Przy tej liczbie lub mniejszej licznik zmienia kolor na bursztynowy.",
+      "ShowActionsName": "Pokaż panel akcji",
+      "ShowActionsHint": "Zakładki nad paskiem makr z testami, bronią, zaklęciami i stanami postaci.",
+      "ActionsOnlyEquippedName": "Panel akcji: tylko założony sprzęt",
+      "ActionsOnlyEquippedHint": "Postacie graczy pokazują tylko założoną broń i pancerz. BN-i i stworzenia zawsze pokazują wszystko.",
+      "BlindOnShiftName": "Shift-klik rzuca jako tajny rzut MG",
+      "BlindOnShiftHint": "Przytrzymanie Shift przy kliknięciu testu w panelu daje tajny rzut MG.",
+      "SkipDialogByDefaultName": "Domyślnie pomijaj okno rzutu",
+      "SkipDialogByDefaultHint": "Testy z panelu rzucają od razu; przytrzymaj Alt, aby zobaczyć okno. Gdy wyłączone, Alt je pomija.",
+      "ShowUnrollableTraitsName": "Pokazuj cechy bez testu",
+      "ShowUnrollableTraitsHint": "Pokazuje też cechy stworzeń bez testu (kliknięcie wysyła je na czat).",
+      "ShowTokenTestsName": "Testy na Token HUD",
+      "ShowTokenTestsHint": "Szybkie testy z wartościami na HUD tokena, dla każdego, kto jest właścicielem postaci."
+    },
+    "NoActor": "Najpierw zaznacz token.",
+    "Skip": {
+      "Untrained": "Brak szkolenia (umiejętność zaawansowana)",
+      "UnknownSkill": "Nie znaleziono umiejętności",
+      "Cancelled": "Anulowano",
+      "Error": "Rzut nieudany (patrz konsola)"
+    },
+    "Tests": {
+      "skill": "Umiejętności",
+      "characteristic": "Cechy",
+      "attribute": "Atrybuty"
+    },
+    "Tab": {
+      "Tests": "Testy"
+    }
+  },
+  "WHFRAMES": {
+    "Title": "Warhammer Battle HUD",
+    "Empty": "Brak postaci do pokazania.",
+    "Hint": "Klik: cel. Podwójny klik: przejście do tokena. Prawy klik: karta postaci.",
+    "ChangeMode": "Zmień, które postacie są pokazywane",
+    "Collapse": "Zwiń lub rozwiń",
+    "NoToken": "{name} nie ma tokena na tej scenie.",
+    "Mode": {
+      "party": "Drużyna",
+      "combat": "Walka",
+      "selected": "Zaznaczone tokeny"
+    },
+    "Skin": {
+      "parchment": "Pergamin",
+      "imperium": "Imperium"
+    },
+    "Stat": {
+      "wounds": "Rany",
+      "shock": "Szok",
+      "toughness": "Wytrzymałość",
+      "mettle": "Hart",
+      "criticals": "Rany krytyczne",
+      "advantage": "Przewaga",
+      "fortune": "Szczęście",
+      "resolve": "Determinacja",
+      "corruption": "Spaczenie",
+      "encumbrance": "Obciążenie",
+      "fate": "Los",
+      "resilience": "Odporność",
+      "wrath": "Gniew"
+    },
+    "Settings": {
+      "ShowFramesName": "Pokazuj ramki drużyny",
+      "ShowFramesHint": "Tylko dla tego użytkownika.",
+      "SkinName": "Wygląd",
+      "SkinHint": "Tylko dla tego użytkownika.",
+      "PlayersSeeAllName": "Gracze widzą szczegóły wszystkich postaci",
+      "PlayersSeeAllHint": "Gdy wyłączone, przy cudzych postaciach gracze widzą tylko paski zdrowia, bez liczb, zasobów i stanów."
+    }
+  },
+  "WFRP4E_HUD": {
+    "Advantage": "Przewaga",
+    "Tabs": {
+      "Characteristics": "Cechy",
+      "Skills": "Umiejętności",
+      "Combat": "Walka",
+      "Magic": "Magia",
+      "Religion": "Wiara",
+      "Talents": "Talenty",
+      "Conditions": "Stany",
+      "Utility": "Inne"
+    },
+    "Groups": {
+      "Characteristics": "Cechy",
+      "BasicSkills": "Umiejętności podstawowe",
+      "AdvancedSkills": "Umiejętności zaawansowane",
+      "Melee": "Broń biała",
+      "Ranged": "Broń dystansowa",
+      "Armour": "Pancerz",
+      "Traits": "Cechy stworzeń",
+      "Petty": "Magia prosta",
+      "Spells": "Zaklęcia",
+      "Channelling": "Splatanie",
+      "Blessings": "Błogosławieństwa",
+      "Miracles": "Cuda",
+      "Talents": "Talenty",
+      "ExtendedTests": "Testy rozszerzone",
+      "Effects": "Skrypty efektów",
+      "Conditions": "Stany",
+      "Advantage": "Przewaga"
+    },
+    "Info": {
+      "Damage": "Uszkodzenie przedmiotu",
+      "CN": "Poziom Mocy"
+    },
+    "Notify": {
+      "NoActor": "Najpierw zaznacz token.",
+      "ItemMissing": "Tego przedmiotu nie ma już u aktora.",
+      "EffectMissing": "Ten skrypt efektu nie jest już dostępny.",
+      "ActionFailed": "Akcja nie powiodła się. Szczegóły w konsoli (F12)."
+    }
+  }
+}

@@ -1,0 +1,417 @@
+/* Warhammer Battle HUD – pasek */
+/* Klasy modułu mają prefiks wham-, żeby nie kolidowały z systemami. */
+
+#warhammer-battle-hud-bar {
+  position: fixed;
+  bottom: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  pointer-events: auto;
+}
+
+.wham-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  max-width: 60vw;
+  color: var(--color-text-light-1, #eee);
+}
+
+.wham-weapon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.wham-weapon.unequipped .wham-icon img {
+  opacity: 0.45;
+}
+
+.wham-bar button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: auto;
+  height: 2.25rem;
+  padding: 0 0.25rem;
+  background: transparent;
+  border: 1px solid transparent;
+  color: inherit;
+  font-size: 0.8rem;
+}
+
+.wham-bar button:hover {
+  border-color: #c9a227;
+}
+
+.wham-bar img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  object-fit: contain;
+}
+
+.wham-ammo .name {
+  max-width: 9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wham-ammo.low strong {
+  color: #e0a030;
+}
+
+.wham-ammo.empty strong {
+  color: #e05050;
+}
+
+.wham-reload.needed {
+  color: #e05050;
+}
+
+.wham-gear {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.wham-gear .wham-icon img {
+  opacity: 0.45;
+}
+
+.wham-gear .wham-icon.equipped img {
+  opacity: 1;
+}
+
+.wham-gear .wham-icon.equipped {
+  border-color: #c9a227;
+}
+
+.wham-list {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  min-width: 100%;
+  margin: 0 0 2px;
+  padding: 2px;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.wham-list button {
+  justify-content: flex-start;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.wham-list button.current {
+  border-color: #c9a227;
+}
+
+.wham-list strong {
+  margin-left: auto;
+  padding-left: 0.5rem;
+}
+
+.wham-chat ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.whb-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.whb-tabs {
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.whb-tabs button {
+  width: auto;
+  height: 1.7rem;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.whb-tabs button.active {
+  background: #7a2b1d;
+  color: #fff;
+}
+
+.whb-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 60vw;
+  max-height: 40vh;
+  padding: 0.4rem;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: var(--color-text-light-1, #eee);
+}
+
+.whb-panel h4 {
+  margin: 0 0 0.2rem;
+  border: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.whb-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.whb-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+  height: 1.7rem;
+  padding: 0 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.whb-action img {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: none;
+}
+
+.whb-action small {
+  opacity: 0.75;
+}
+
+.whb-action.toggle.active {
+  background: #7a2b1d;
+  color: #fff;
+}
+
+/* Warhammer Party Frames */
+/* Klasy modułu mają prefiks whf-, żeby nie kolidowały z systemami. */
+
+#warhammer-battle-hud-root {
+  position: fixed;
+  top: 20vh;
+  left: 4.5rem;
+  z-index: 60;
+  width: 15rem;
+  pointer-events: auto;
+}
+
+.whf-root {
+  --whf-bg: rgba(233, 220, 190, 0.95);
+  --whf-text: #2b1d0e;
+  --whf-border: #6b4f2a;
+  --whf-track: rgba(60, 40, 20, 0.3);
+  --whf-accent: #8a5a00;
+  color: var(--whf-text);
+  font-size: 0.8rem;
+}
+
+.whf-root.whf-skin-imperium {
+  --whf-bg: rgba(22, 22, 28, 0.94);
+  --whf-text: #e7e0cf;
+  --whf-border: #b08d3a;
+  --whf-track: rgba(255, 255, 255, 0.15);
+  --whf-accent: #d9b04c;
+}
+
+.whf-header {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1px 4px;
+  background: var(--whf-bg);
+  border: 1px solid var(--whf-border);
+  border-radius: 4px;
+  cursor: grab;
+}
+
+.whf-header button {
+  width: auto;
+  height: 1.25rem;
+  padding: 0 0.25rem;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 0.75rem;
+}
+
+.whf-header .whf-mode {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.whf-frame {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 2px;
+  padding: 3px;
+  background: var(--whf-bg);
+  border: 1px solid var(--whf-border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.whf-frame.active {
+  box-shadow: 0 0 0 2px var(--whf-accent);
+}
+
+.whf-frame.targeted {
+  border-color: #c0392b;
+  box-shadow: inset 0 0 0 1px #c0392b;
+}
+
+.whf-portrait {
+  flex: 0 0 auto;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--whf-border);
+  object-fit: cover;
+  object-position: top;
+}
+
+.whf-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.whf-name {
+  overflow: hidden;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whf-bar {
+  position: relative;
+  height: 0.8rem;
+  margin-top: 1px;
+  overflow: hidden;
+  background: var(--whf-track);
+  border-radius: 2px;
+}
+
+.whf-fill {
+  height: 100%;
+}
+
+.whf-bar.healthy .whf-fill {
+  background: #3a8a3a;
+}
+
+.whf-bar.hurt .whf-fill {
+  background: #c98a1b;
+}
+
+.whf-bar.critical .whf-fill {
+  background: #b03030;
+}
+
+.whf-bar.resource .whf-fill {
+  background: #3a6ea5;
+}
+
+.whf-bar span {
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  font-size: 0.65rem;
+  line-height: 0.8rem;
+  text-align: center;
+  text-shadow: 0 0 2px #000;
+}
+
+.whf-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1px;
+  font-size: 0.7rem;
+}
+
+.whf-conditions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-top: 1px;
+}
+
+.whf-conditions span {
+  position: relative;
+}
+
+.whf-conditions img {
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: none;
+}
+
+.whf-conditions b {
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  color: #fff;
+  font-size: 0.6rem;
+  text-shadow: 0 0 2px #000;
+}
+
+.whf-empty {
+  margin: 2px 0 0;
+  padding: 3px 5px;
+  background: var(--whf-bg);
+  border: 1px solid var(--whf-border);
+  border-radius: 4px;
+  font-style: italic;
+}
+
+#token-hud .whb-hud {
+  position: absolute;
+  right: calc(100% + 4rem);
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#token-hud .whb-hud-test {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.65rem;
+  line-height: 1;
+}

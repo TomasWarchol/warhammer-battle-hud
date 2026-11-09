@@ -1,0 +1,131 @@
+{
+  "WHAMMO": {
+    "Title": "Warhammer Battle HUD",
+    "NoAmmo": "No matching ammunition.",
+    "NoneSelected": "No ammunition",
+    "ChooseAmmo": "Choose ammunition",
+    "ToggleEquip": "equip or put away",
+    "Reload": "Reload",
+    "Failed": "That did not work. See the console (F12).",
+    "Empty": "{name}: last one used.",
+    "Settings": {
+      "ShowBarName": "Show the ammunition row",
+      "ShowBarHint": "For this user only.",
+      "OnlyEquippedName": "Only equipped ranged weapons",
+      "OnlyEquippedHint": "Put-away ranged weapons move to the small gear group.",
+      "ShowGearName": "Show the other weapons",
+      "ShowGearHint": "A small group of icons for equipping melee weapons and shields with one click.",
+      "LowAmmoName": "Low ammunition warning",
+      "LowAmmoHint": "The count turns amber at this number or below.",
+      "ShowActionsName": "Show the action panel",
+      "ShowActionsHint": "Tabs above the hotbar with the character's tests, weapons, spells and conditions.",
+      "ActionsOnlyEquippedName": "Action panel: only equipped gear",
+      "ActionsOnlyEquippedHint": "Player characters show only equipped weapons and armour. NPCs and creatures always show everything.",
+      "BlindOnShiftName": "Shift-click rolls as Blind GM",
+      "BlindOnShiftHint": "Holding Shift while clicking a test in the panel makes it a Blind GM roll.",
+      "SkipDialogByDefaultName": "Skip the roll dialog by default",
+      "SkipDialogByDefaultHint": "Tests from the panel roll straight away; hold Alt to see the dialog. When off, Alt skips it.",
+      "ShowUnrollableTraitsName": "Show traits without a test",
+      "ShowUnrollableTraitsHint": "Also list traits that have no test (clicking posts them to chat).",
+      "ShowTokenTestsName": "Tests on the Token HUD",
+      "ShowTokenTestsHint": "Quick tests with their values on the token's HUD, for anyone who owns the character."
+    },
+    "NoActor": "Select a token first.",
+    "Skip": {
+      "Untrained": "Untrained (advanced skill)",
+      "UnknownSkill": "Skill not found",
+      "Cancelled": "Cancelled",
+      "Error": "Roll failed (see console)"
+    },
+    "Tests": {
+      "skill": "Skills",
+      "characteristic": "Characteristics",
+      "attribute": "Attributes"
+    },
+    "Tab": {
+      "Tests": "Tests"
+    }
+  },
+  "WHFRAMES": {
+    "Title": "Warhammer Battle HUD",
+    "Empty": "No characters to show.",
+    "Hint": "Click: target. Double-click: go to the token. Right-click: open the sheet.",
+    "ChangeMode": "Change which characters are shown",
+    "Collapse": "Collapse or expand",
+    "NoToken": "{name} has no token on this scene.",
+    "Mode": {
+      "party": "Party",
+      "combat": "Combat",
+      "selected": "Selected tokens"
+    },
+    "Skin": {
+      "parchment": "Parchment",
+      "imperium": "Imperium"
+    },
+    "Stat": {
+      "wounds": "Wounds",
+      "shock": "Shock",
+      "toughness": "Toughness",
+      "mettle": "Mettle",
+      "criticals": "Critical Wounds",
+      "advantage": "Advantage",
+      "fortune": "Fortune",
+      "resolve": "Resolve",
+      "corruption": "Corruption",
+      "encumbrance": "Encumbrance",
+      "fate": "Fate",
+      "resilience": "Resilience",
+      "wrath": "Wrath"
+    },
+    "Settings": {
+      "ShowFramesName": "Show the party frames",
+      "ShowFramesHint": "For this user only.",
+      "SkinName": "Appearance",
+      "SkinHint": "For this user only.",
+      "PlayersSeeAllName": "Players see everyone's details",
+      "PlayersSeeAllHint": "When off, players see only the health bars of characters they do not own, without numbers, resources or conditions."
+    }
+  },
+  "WFRP4E_HUD": {
+    "Advantage": "Advantage",
+    "Tabs": {
+      "Characteristics": "Characteristics",
+      "Skills": "Skills",
+      "Combat": "Combat",
+      "Magic": "Magic",
+      "Religion": "Religion",
+      "Talents": "Talents",
+      "Conditions": "Conditions",
+      "Utility": "Utility"
+    },
+    "Groups": {
+      "Characteristics": "Characteristics",
+      "BasicSkills": "Basic Skills",
+      "AdvancedSkills": "Advanced Skills",
+      "Melee": "Melee Weapons",
+      "Ranged": "Ranged Weapons",
+      "Armour": "Armour",
+      "Traits": "Traits",
+      "Petty": "Petty Spells",
+      "Spells": "Spells",
+      "Channelling": "Channelling",
+      "Blessings": "Blessings",
+      "Miracles": "Miracles",
+      "Talents": "Talents",
+      "ExtendedTests": "Extended Tests",
+      "Effects": "Effect Scripts",
+      "Conditions": "Conditions",
+      "Advantage": "Advantage"
+    },
+    "Info": {
+      "Damage": "Damage to the item",
+      "CN": "Casting Number"
+    },
+    "Notify": {
+      "NoActor": "Select a token first.",
+      "ItemMissing": "This item no longer exists on the actor.",
+      "EffectMissing": "This effect script is no longer available.",
+      "ActionFailed": "The action failed. See the console (F12) for details."
+    }
+  }
+}

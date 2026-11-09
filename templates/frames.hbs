@@ -1,0 +1,35 @@
+<div class="whf-root whf-skin-{{skin}}">
+  <header class="whf-header">
+    <i class="fa-solid fa-grip-vertical" inert></i>
+    <button type="button" class="whf-mode" data-action="cycleMode" data-tooltip="{{localize 'WHFRAMES.ChangeMode'}}">{{modeLabel}}</button>
+    <button type="button" data-action="toggleCollapse" data-tooltip="{{localize 'WHFRAMES.Collapse'}}" aria-label="{{localize 'WHFRAMES.Collapse'}}"><i class="fa-solid {{#if collapsed}}fa-chevron-down{{else}}fa-chevron-up{{/if}}"></i></button>
+  </header>
+  {{#unless collapsed}}
+    {{#each frames}}
+      <article class="whf-frame {{#if targeted}}targeted{{/if}} {{#if active}}active{{/if}}" data-uuid="{{uuid}}" data-tooltip="{{localize 'WHFRAMES.Hint'}}">
+        <img class="whf-portrait" src="{{img}}" alt="">
+        <div class="whf-body">
+          <div class="whf-name">{{name}}</div>
+          {{#each bars}}
+            <div class="whf-bar {{tone}}" aria-label="{{label}}" data-tooltip="{{label}}">
+              <div class="whf-fill" style="width: {{fill}}%"></div>
+              <span>{{text}}</span>
+            </div>
+          {{/each}}
+          {{#if stats.length}}
+            <div class="whf-stats">
+              {{#each stats}}<span data-tooltip="{{label}}"><i class="fa-solid {{icon}}" inert></i> {{value}}{{#if max}}/{{max}}{{/if}}</span>{{/each}}
+            </div>
+          {{/if}}
+          {{#if conditions.length}}
+            <div class="whf-conditions">
+              {{#each conditions}}<span data-tooltip="{{name}}"><img src="{{img}}" alt="{{name}}">{{#if value}}<b>{{value}}</b>{{/if}}</span>{{/each}}
+            </div>
+          {{/if}}
+        </div>
+      </article>
+    {{else}}
+      <p class="whf-empty">{{localize "WHFRAMES.Empty"}}</p>
+    {{/each}}
+  {{/unless}}
+</div>

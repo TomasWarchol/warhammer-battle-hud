@@ -1,0 +1,91 @@
+{
+  "id": "warhammer-battle-hud",
+  "title": "Warhammer Battle HUD",
+  "description": "Party frames, an action panel and an ammunition bar for every Warhammer system in Foundry VTT (WFRP 4e/5e, The Old World, Imperium Maledictum, Wrath & Glory, Soulbound).",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "Tomek (TomasWarchol)",
+      "url": "https://github.com/TomasWarchol",
+      "discord": "tomek"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "wfrp4e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "10.0.0"
+        }
+      },
+      {
+        "id": "whtow",
+        "type": "system",
+        "compatibility": {
+          "minimum": "1.3.0"
+        }
+      },
+      {
+        "id": "impmal",
+        "type": "system",
+        "compatibility": {
+          "minimum": "4.0.0"
+        }
+      },
+      {
+        "id": "wrath-and-glory",
+        "type": "system",
+        "compatibility": {
+          "minimum": "8.0.0"
+        }
+      },
+      {
+        "id": "age-of-sigmar-soulbound",
+        "type": "system",
+        "compatibility": {
+          "minimum": "9.0.0"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/warhammer-battle-hud.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json"
+    }
+  ],
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "hbs",
+        "json"
+      ]
+    }
+  },
+  "url": "https://github.com/TomasWarchol/warhammer-battle-hud",
+  "manifest": "https://github.com/TomasWarchol/warhammer-battle-hud/releases/latest/download/module.json",
+  "download": "https://github.com/TomasWarchol/warhammer-battle-hud/releases/latest/download/module.zip",
+  "bugs": "https://github.com/TomasWarchol/warhammer-battle-hud/issues",
+  "readme": "https://github.com/TomasWarchol/warhammer-battle-hud/blob/main/README.md",
+  "changelog": "https://github.com/TomasWarchol/warhammer-battle-hud/blob/main/CHANGELOG.md",
+  "license": "https://github.com/TomasWarchol/warhammer-party-frames/blob/main/LICENSE"
+}

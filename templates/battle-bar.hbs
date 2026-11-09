@@ -1,0 +1,62 @@
+<div class="whb-stack">
+  {{#if actionPanel}}
+    <div class="whb-panel">
+      {{#each actionPanel}}
+        <section>
+          <h4>{{label}}</h4>
+          <div class="whb-actions">
+            {{#each actions}}
+              <button type="button" class="whb-action {{cssClass}}" data-action="runAction" data-value="{{value}}" {{#if tooltip}}data-tooltip="{{tooltip}}"{{/if}}>
+                {{#if img}}<img src="{{img}}" alt="">{{/if}}
+                <span>{{name}}</span>
+                {{#if detail}}<small>{{detail}}</small>{{/if}}
+              </button>
+            {{/each}}
+          </div>
+        </section>
+      {{/each}}
+    </div>
+  {{/if}}
+  {{#if actionTabs.length}}
+    <nav class="whb-tabs">
+      {{#each actionTabs}}
+        <button type="button" class="{{#if active}}active{{/if}}" data-action="openTab" data-tab="{{id}}">{{label}}</button>
+      {{/each}}
+    </nav>
+  {{/if}}
+  <div class="wham-bar">
+    {{#each weapons}}
+      <div class="wham-weapon {{#unless equipped}}unequipped{{/unless}}" data-weapon="{{id}}">
+        {{#if open}}
+          <ul class="wham-list">
+            {{#each options}}
+              <li><button type="button" class="{{#if current}}current{{/if}}" data-action="chooseAmmo" data-ammo="{{id}}"><img src="{{img}}" alt=""> <span>{{name}}</span> <strong>{{count}}</strong></button></li>
+            {{else}}
+              <li class="hint">{{localize "WHAMMO.NoAmmo"}}</li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        <button type="button" class="wham-icon" data-action="toggleEquip" data-tooltip="{{name}}: {{localize 'WHAMMO.ToggleEquip'}}" aria-label="{{name}}"><img src="{{img}}" alt=""></button>
+        <button type="button" class="wham-ammo {{ammo.state}}" data-action="toggleList" data-tooltip="{{localize 'WHAMMO.ChooseAmmo'}}">
+          {{#if ammo}}
+            <img src="{{ammo.img}}" alt=""><span class="name">{{ammo.name}}</span><strong>{{ammo.count}}</strong>
+          {{else}}
+            <span class="name">{{localize "WHAMMO.NoneSelected"}}</span>
+          {{/if}}
+        </button>
+        {{#if load}}
+          <button type="button" class="wham-reload {{#if load.needsReload}}needed{{/if}}" data-action="reload" data-tooltip="{{localize 'WHAMMO.Reload'}}" aria-label="{{localize 'WHAMMO.Reload'}}">
+            <i class="fa-solid fa-rotate"></i>{{#if load.text}} {{load.text}}{{/if}}
+          </button>
+        {{/if}}
+      </div>
+    {{/each}}
+    {{#if gear.length}}
+      <div class="wham-gear">
+        {{#each gear}}
+          <button type="button" class="wham-icon {{#if equipped}}equipped{{/if}}" data-weapon="{{id}}" data-action="toggleEquip" data-tooltip="{{name}}: {{localize 'WHAMMO.ToggleEquip'}}" aria-label="{{name}}"><img src="{{img}}" alt=""></button>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</div>
